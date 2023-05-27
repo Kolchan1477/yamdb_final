@@ -41,9 +41,9 @@ jobs:
       - name: Push to Docker Hub
         uses: docker/build-push-action@v2
         with:
-          context: ./api_yamdb/
+          context: ./yamdb/
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/api_yamdb:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/yamdb:latest
   deploy:
     runs-on: ubuntu-latest
     needs: build_and_push_to_docker_hub
@@ -57,7 +57,7 @@ jobs:
         passphrase: ${{ secrets.PASSPHRASE }}
         script: |
           cd infra/
-          sudo docker pull kolchan7714/api_yamdb:latest
+          sudo docker pull kolchan7714/yamdb:latest
           sudo docker-compose stop
           sudo docker-compose rm web
           touch .env
