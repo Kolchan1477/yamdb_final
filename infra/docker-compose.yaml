@@ -9,9 +9,7 @@ services:
       - ./.env
 
   web:
-    build:
-        context: ../
-        dockerfile: api_yamdb/Dockerfile
+    image: kolchan7714/yamdb:latest
     restart: always
     volumes:
       - static_value:/app/static/
