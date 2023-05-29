@@ -9,7 +9,7 @@ services:
       - ./.env
 
   web:
-    image: kolchan7714/yamdb:latest
+    image: kolchan7714/infra_actions:latest
     restart: always
     volumes:
       - static_value:/app/static/
