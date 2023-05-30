@@ -70,3 +70,9 @@ docker-compose exec web python manage.py createsuperuser
 или
 
 docker-compose exec web python manage.py loaddata fixtures.json
+
+Авторы
+Владислав Назипов — Тимлид Колчанова Алла — Разработчик
+
+Развёрнутый проект
+http://51.250.76.63/api/v1/ http://51.250.76.63/admin/ http://51.250.76.63/redoc/

@@ -43,7 +43,7 @@ jobs:
         with:
           context: ./api_yamdb/
           push: true
-          tags: kolchan7714/infra_actions:latest
+          tags: kolchan7714/yamdb:latest
 
   deploy:
     runs-on: ubuntu-latest
